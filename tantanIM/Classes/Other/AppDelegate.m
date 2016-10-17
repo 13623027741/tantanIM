@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "KDHomeViewController.h"
+#import "KDGuillotineMenu.h"
 #import "KDMainViewController.h"
-
 @interface AppDelegate ()
 
 @end
@@ -16,11 +17,29 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    NSArray* controllers = @[[KDHomeViewController new],
+                             [KDHomeViewController new],
+                             [KDHomeViewController new],
+                             [KDHomeViewController new]
+                             ];
+    NSArray* titles = @[@"首页",@"信息",@"设置",@"分享"];
+    
+    NSArray* images = @[];
+    
+    KDGuillotineMenu* menuController = [[KDGuillotineMenu alloc]initWithViewControllers:controllers MenuTitles:titles andImagesTitles:nil andStyle:KDGuillotineMenuStyleTable];
+    
+    
+    KDMainViewController* navigationController = [[KDMainViewController alloc] initWithRootViewController:menuController];
     
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    self.window.rootViewController = [KDMainViewController new];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;
