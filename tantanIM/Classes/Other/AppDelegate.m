@@ -7,10 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "KDHomeViewController.h"
 #import "KDGuillotineMenu.h"
 #import "KDMainViewController.h"
-@interface AppDelegate ()
+#import "KDMessageViewController.h"
+#import "KDProfileViewController.h"
+#import "KDSouSouViewController.h"
+#import "KDSettingViewController.h"
+
+@interface AppDelegate ()<KDGuillotineMenuDelegate>
 
 @end
 
@@ -22,17 +26,17 @@
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    NSArray* controllers = @[[KDHomeViewController new],
-                             [KDHomeViewController new],
-                             [KDHomeViewController new],
-                             [KDHomeViewController new]
+    NSArray* controllers = @[[KDProfileViewController new],
+                             [KDSouSouViewController new],
+                             [KDMessageViewController new],
+                             [KDSettingViewController new]
                              ];
-    NSArray* titles = @[@"首页",@"信息",@"设置",@"分享"];
+    NSArray* titles = @[@"我的",@"搜搜",@"消息",@"设置"];
     
-    NSArray* images = @[];
+    NSArray* images = @[@"ic_profile",@"ic_profile",@"ic_settings",@"ic_settings"];
     
-    KDGuillotineMenu* menuController = [[KDGuillotineMenu alloc]initWithViewControllers:controllers MenuTitles:titles andImagesTitles:nil andStyle:KDGuillotineMenuStyleTable];
-    
+    KDGuillotineMenu* menuController = [[KDGuillotineMenu alloc]initWithViewControllers:controllers MenuTitles:titles andImagesTitles:images andStyle:KDGuillotineMenuStyleCollection];
+    menuController.delegate = self;
     
     KDMainViewController* navigationController = [[KDMainViewController alloc] initWithRootViewController:menuController];
     
@@ -43,6 +47,16 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)menuDidOpen{
+    NSLog(@"打开");
+}
+- (void)menuDidClose{
+    NSLog(@"关闭");
+}
+- (void)selectedMenuItemAtIndex:(NSInteger)index{
+    NSLog(@"选中那个item -- %ld",index);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
