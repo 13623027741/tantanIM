@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+/**
+ *  重新设置根视图控制器
+ */
+-(void)resetRootViewController;
 @end
 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log View Controller-->
+        <scene sceneID="Nfe-Ys-Ouu">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="dhE-cN-u4N" customClass="KDLogViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0c0-9D-jWb"/>
+                        <viewControllerLayoutGuide type="bottom" id="KgW-L7-yAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="anf-8y-49x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-cQ-IQp">
+                                <rect key="frame" x="-4" y="130" width="391" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wQe-L3-iC3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" minimumFontSize="17" background="login_country_background" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-wG-W3A">
+                                <rect key="frame" x="92" y="130" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RLr-TJ-8ae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYa-3d-VHC">
+                                <rect key="frame" x="16" y="180" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="REK-Bu-U5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8i-j1-yDa">
+                                <rect key="frame" x="-8" y="130" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OBy-qf-xLV"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q85-yF-noy"/>
+                                </constraints>
+                                <state key="normal" title="+86" backgroundImage="login_country_background">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSL-kD-TrJ">
+                                <rect key="frame" x="87.5" y="250" width="200" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KNI-U6-due"/>
+                                    <constraint firstAttribute="height" constant="40" id="zwf-BY-9jK"/>
+                                </constraints>
+                                <state key="normal" title="登 录">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewH-wG-W3A" firstAttribute="top" secondItem="0c0-9D-jWb" secondAttribute="bottom" constant="110" id="7X9-3C-Yf1"/>
+                            <constraint firstItem="h8i-j1-yDa" firstAttribute="leading" secondItem="anf-8y-49x" secondAttribute="leadingMargin" constant="-24" id="Ak1-w5-Uxt"/>
+                            <constraint firstItem="ewH-wG-W3A" firstAttribute="leading" secondItem="h8i-j1-yDa" secondAttribute="trailing" id="GWC-Oe-e6X"/>
+                            <constraint firstItem="h8i-j1-yDa" firstAttribute="top" secondItem="0c0-9D-jWb" secondAttribute="bottom" constant="110" id="Hex-sk-0fg"/>
+                            <constraint firstItem="fYa-3d-VHC" firstAttribute="top" secondItem="h8i-j1-yDa" secondAttribute="bottom" id="bNH-tH-BIa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ewH-wG-W3A" secondAttribute="trailing" constant="-60" id="fd3-e6-NJI"/>
+                            <constraint firstItem="bSL-kD-TrJ" firstAttribute="top" secondItem="fYa-3d-VHC" secondAttribute="bottom" constant="20" id="gQD-vb-mQu"/>
+                            <constraint firstItem="bSL-kD-TrJ" firstAttribute="centerX" secondItem="anf-8y-49x" secondAttribute="centerX" id="qAt-XZ-4gj"/>
+                            <constraint firstItem="tDR-cQ-IQp" firstAttribute="leading" secondItem="anf-8y-49x" secondAttribute="leadingMargin" constant="-20" id="rIn-Uq-nYZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tDR-cQ-IQp" secondAttribute="trailing" constant="-28" id="sGI-Fv-Brx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fYa-3d-VHC" secondAttribute="trailing" id="sYl-6n-NX7"/>
+                            <constraint firstItem="tDR-cQ-IQp" firstAttribute="top" secondItem="0c0-9D-jWb" secondAttribute="bottom" constant="110" id="txF-zE-gPV"/>
+                            <constraint firstItem="fYa-3d-VHC" firstAttribute="leading" secondItem="anf-8y-49x" secondAttribute="leadingMargin" id="wn3-Xn-Bph"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="bSL-kD-TrJ" id="i1z-pp-cMv"/>
+                        <outlet property="passWrodText" destination="fYa-3d-VHC" id="cu0-uj-2En"/>
+                        <outlet property="userNameText" destination="ewH-wG-W3A" id="xk8-er-f4u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byf-jc-BBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="371"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_background" width="320" height="99"/>
+        <image name="login_country_background" width="104" height="55"/>
+    </resources>
+</document>

@@ -33,6 +33,11 @@
 		B1EBB11D1DB5C0E9000C8717 /* CCDraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1191DB5C0E9000C8717 /* CCDraggableCardView.m */; };
 		B1EBB11E1DB5C0E9000C8717 /* CCDraggableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB11C1DB5C0E9000C8717 /* CCDraggableContainer.m */; };
 		B1EBB1211DB5C15C000C8717 /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1201DB5C15C000C8717 /* CustomCardView.m */; };
+		B1EBB1241DB5CAE9000C8717 /* KDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */; };
+		B1EBB1271DB5D950000C8717 /* KDRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */; };
+		B1EBB12A1DB5D962000C8717 /* KDLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1291DB5D962000C8717 /* KDLogViewController.m */; };
+		B1EBB12E1DB66218000C8717 /* KDRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */; };
+		B1EBB1301DB70E6A000C8717 /* KDLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +117,14 @@
 		B1EBB11C1DB5C0E9000C8717 /* CCDraggableContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDraggableContainer.m; sourceTree = "<group>"; };
 		B1EBB11F1DB5C15C000C8717 /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
 		B1EBB1201DB5C15C000C8717 /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
+		B1EBB1221DB5CAE9000C8717 /* KDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoginViewController.h; sourceTree = "<group>"; };
+		B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLoginViewController.m; sourceTree = "<group>"; };
+		B1EBB1251DB5D950000C8717 /* KDRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDRegisterViewController.h; sourceTree = "<group>"; };
+		B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDRegisterViewController.m; sourceTree = "<group>"; };
+		B1EBB1281DB5D962000C8717 /* KDLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLogViewController.h; sourceTree = "<group>"; };
+		B1EBB1291DB5D962000C8717 /* KDLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLogViewController.m; sourceTree = "<group>"; };
+		B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDRegisterViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDLogViewController.storyboard; sourceTree = "<group>"; };
 		C3CBB9C7B7CC96315C38AE96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E7937B6F89056175393CED5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +243,14 @@
 				B1EBB0D31DB5B1B5000C8717 /* KDSettingViewController.m */,
 				B1EBB0D51DB5B1C7000C8717 /* KDSouSouViewController.h */,
 				B1EBB0D61DB5B1C7000C8717 /* KDSouSouViewController.m */,
+				B1EBB1221DB5CAE9000C8717 /* KDLoginViewController.h */,
+				B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */,
+				B1EBB1251DB5D950000C8717 /* KDRegisterViewController.h */,
+				B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */,
+				B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */,
+				B1EBB1281DB5D962000C8717 /* KDLogViewController.h */,
+				B1EBB1291DB5D962000C8717 /* KDLogViewController.m */,
+				B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -406,7 +427,9 @@
 			files = (
 				B176F59A1DB4B769008D91F2 /* LaunchScreen.storyboard in Resources */,
 				B176F5971DB4B769008D91F2 /* Assets.xcassets in Resources */,
+				B1EBB12E1DB66218000C8717 /* KDRegisterViewController.storyboard in Resources */,
 				B1EBB0BC1DB4B8FD000C8717 /* Info.plist in Resources */,
+				B1EBB1301DB70E6A000C8717 /* KDLogViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,13 +490,16 @@
 			files = (
 				B1EBB1211DB5C15C000C8717 /* CustomCardView.m in Sources */,
 				B1EBB0CB1DB4D2B4000C8717 /* KDGuillotineMenu.m in Sources */,
+				B1EBB12A1DB5D962000C8717 /* KDLogViewController.m in Sources */,
 				B1EBB11D1DB5C0E9000C8717 /* CCDraggableCardView.m in Sources */,
 				B1EBB0C21DB4BA2F000C8717 /* KDMainViewController.m in Sources */,
 				B1EBB11E1DB5C0E9000C8717 /* CCDraggableContainer.m in Sources */,
 				B1EBB0CE1DB5B18D000C8717 /* KDProfileViewController.m in Sources */,
+				B1EBB1271DB5D950000C8717 /* KDRegisterViewController.m in Sources */,
 				B1EBB0BB1DB4B8FD000C8717 /* AppDelegate.m in Sources */,
 				B176F58C1DB4B769008D91F2 /* main.m in Sources */,
 				B1EBB0D11DB5B19B000C8717 /* KDMessageViewController.m in Sources */,
+				B1EBB1241DB5CAE9000C8717 /* KDLoginViewController.m in Sources */,
 				B1EBB0D41DB5B1B5000C8717 /* KDSettingViewController.m in Sources */,
 				B1EBB0D71DB5B1C7000C8717 /* KDSouSouViewController.m in Sources */,
 			);

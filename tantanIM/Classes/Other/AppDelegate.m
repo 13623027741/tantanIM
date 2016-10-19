@@ -14,7 +14,13 @@
 #import "KDSouSouViewController.h"
 #import "KDSettingViewController.h"
 
-@interface AppDelegate ()<KDGuillotineMenuDelegate>
+#import "EMSDK.h"
+
+#import "KDLoginViewController.h"
+
+#define appKey @"walter-go#mywalter"
+
+@interface AppDelegate ()<KDGuillotineMenuDelegate,EMClientDelegate>
 
 @end
 
@@ -24,7 +30,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    [self resetRootViewController];
+    
+    return YES;
+}
+
+-(void)resetRootViewController{
+    
+    EMOptions* options = [EMOptions optionsWithAppkey:appKey];
+    [[EMClient sharedClient]initializeSDKWithOptions:options];
     
     NSArray* controllers = @[[KDProfileViewController new],
                              [KDSouSouViewController new],
@@ -41,13 +63,27 @@
     KDMainViewController* navigationController = [[KDMainViewController alloc] initWithRootViewController:menuController];
     
     
-    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
+    KDLoginViewController* loginVC = [KDLoginViewController new];
     
-    return YES;
+    
+//    if ([[EMClient sharedClient].options isAutoLogin]) {
+//        self.window.rootViewController = navigationController;
+//    }else{
+//        self.window.rootViewController = loginVC;
+//    }
+    
+    self.window.rootViewController = navigationController;
+    
 }
+
+
+#pragma mark - 自动登录
+
+-(void)didAutoLoginWithError:(EMError *)aError{
+    
+    [self resetRootViewController];
+}
+
 
 - (void)menuDidOpen{
     NSLog(@"打开");
@@ -67,10 +103,16 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
