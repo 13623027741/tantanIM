@@ -7,6 +7,7 @@
 //
 
 #import "CustomCardView.h"
+#import "KDPhoto.h"
 
 @interface CustomCardView ()
 
@@ -53,9 +54,9 @@
     self.titleLabel.frame = CGRectMake(0, self.frame.size.height - 64, self.frame.size.width, 64);
 }
 
-- (void)installData:(NSDictionary *)element {
-    self.imageView.image  = [UIImage imageNamed:element[@"image"]];
-    self.titleLabel.text = element[@"title"];
+-(void)installData:(KDPhoto *)photo{
+    self.imageView.image = [UIImage imageNamed:photo.url];
+    self.titleLabel.text = photo.title;
 }
 
 @end

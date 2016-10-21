@@ -31,7 +31,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    
+    if ([UIDevice currentDevice].systemVersion.floatValue>=8.0) {
+        
+        UIUserNotificationType type =UIUserNotificationTypeBadge|UIUserNotificationTypeAlert|UIUserNotificationTypeSound;
+        
+        UIUserNotificationSettings * setting = [UIUserNotificationSettings settingsForTypes:type categories:nil];
+        
+        [[UIApplication sharedApplication]registerUserNotificationSettings:setting];
+        
+    }
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -48,12 +56,21 @@
     EMOptions* options = [EMOptions optionsWithAppkey:appKey];
     [[EMClient sharedClient]initializeSDKWithOptions:options];
     
-    NSArray* controllers = @[[KDProfileViewController new],
-                             [KDSouSouViewController new],
-                             [KDMessageViewController new],
-                             [KDSettingViewController new]
+    KDProfileViewController* profileVC = [[UIStoryboard storyboardWithName:@"KDProfileViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"profile"];
+    
+    KDSouSouViewController* sousouVC = [[UIStoryboard storyboardWithName:@"KDSouSouViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"sousou"];
+    
+    KDMessageViewController* messageVC = [[UIStoryboard storyboardWithName:@"KDMessageViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"message"];
+    
+    KDSettingViewController* settingVC = [[UIStoryboard storyboardWithName:@"KDSettingViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"setting"];
+    
+    
+    NSArray* controllers = @[sousouVC,
+                             profileVC,
+                             messageVC,
+                             settingVC
                              ];
-    NSArray* titles = @[@"我的",@"搜搜",@"消息",@"设置"];
+    NSArray* titles = @[@"搜搜",@"我的",@"消息",@"设置"];
     
     NSArray* images = @[@"ic_profile",@"ic_profile",@"ic_settings",@"ic_settings"];
     
@@ -66,13 +83,11 @@
     KDLoginViewController* loginVC = [KDLoginViewController new];
     
     
-//    if ([[EMClient sharedClient].options isAutoLogin]) {
-//        self.window.rootViewController = navigationController;
-//    }else{
-//        self.window.rootViewController = loginVC;
-//    }
-    
-    self.window.rootViewController = navigationController;
+    if ([[EMClient sharedClient].options isAutoLogin]) {
+        self.window.rootViewController = navigationController;
+    }else{
+        self.window.rootViewController = loginVC;
+    }
     
 }
 

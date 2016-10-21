@@ -9,6 +9,8 @@
 #import "KDSouSouViewController.h"
 #import "CCDraggableContainer.h"
 #import "CustomCardView.h"
+#import "KDPhoto.h"
+#import "KDInfoViewController.h"
 
 @interface KDSouSouViewController ()<CCDraggableContainerDataSource,CCDraggableContainerDelegate>
 
@@ -21,17 +23,26 @@
 
 @implementation KDSouSouViewController
 
+-(NSMutableArray *)dataSources{
+    if (!_dataSources) {
+        _dataSources = [NSMutableArray array];
+    }
+    return _dataSources;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self loadData];
     [self loadUI];
     
+    
+    
 }
 
 - (void)loadUI {
     
-    self.container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 64, CCWidth, CCWidth) style:CCDraggableStyleUpOverlay];
+    self.container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 64, CCWidth,1.5 * CCWidth) style:CCDraggableStyleUpOverlay];
     self.container.delegate = self;
     self.container.dataSource = self;
     [self.view addSubview:self.container];
@@ -41,19 +52,15 @@
 
 - (void)loadData {
     
-    _dataSources = [NSMutableArray array];
     
     for (int i = 0; i < 9; i++) {
-        NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"image_%d.jpg",i + 1],
-                               @"title" : [NSString stringWithFormat:@"Page %d",i + 1]};
-        [_dataSources addObject:dict];
+        
+        KDPhoto* photo = [KDPhoto PhotoWithUrl:[NSString stringWithFormat:@"image_%d.jpg",i + 1] title:[NSString stringWithFormat:@"第%d张",i + 1] userID:nil];
+        
+        [self.dataSources addObject:photo];
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - CCDraggableContainer DataSource
 
@@ -72,23 +79,33 @@
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer draggableDirection:(CCDraggableDirection)draggableDirection widthRatio:(CGFloat)widthRatio heightRatio:(CGFloat)heightRatio {
     
-//    CGFloat scale = 1 + ((kBoundaryRatio > fabs(widthRatio) ? fabs(widthRatio) : kBoundaryRatio)) / 4;
-    if (draggableDirection == CCDraggableDirectionLeft) {
-//        self.disLikeButton.transform = CGAffineTransformMakeScale(scale, scale);
+    NSLog(@"宽度的偏移[%g] 高度的偏移[%g]",widthRatio,heightRatio);
+    
+    if (widthRatio < -0.5) {
+        [draggableContainer removeFormDirection:CCDraggableDirectionLeft];
+        NSLog(@"向左有没有移除");
+    }else if (widthRatio > 0.5){
+        [draggableContainer removeFormDirection:CCDraggableDirectionRight];
+        NSLog(@"向右有没有移除");
     }
-    if (draggableDirection == CCDraggableDirectionRight) {
-//        self.likeButton.transform = CGAffineTransformMakeScale(scale, scale);
-    }
+    
+    
 }
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer cardView:(CCDraggableCardView *)cardView didSelectIndex:(NSInteger)didSelectIndex {
     
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
     
+    KDInfoViewController* profileVC = [[UIStoryboard storyboardWithName:@"KDInfoViewController" bundle:nil]instantiateViewControllerWithIdentifier:@"info"];
+    [self.navigationController pushViewController:profileVC animated:YES];
+    
 }
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer finishedDraggableLastCard:(BOOL)finishedDraggableLastCard {
     
-    [draggableContainer reloadData];
+//    [draggableContainer reloadData];
+    
+    NSLog(@"---%d",finishedDraggableLastCard);
+    
 }
 @end

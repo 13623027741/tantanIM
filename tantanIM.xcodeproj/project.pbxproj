@@ -13,12 +13,7 @@
 		B176F59A1DB4B769008D91F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B176F5981DB4B769008D91F2 /* LaunchScreen.storyboard */; };
 		B1EBB0BB1DB4B8FD000C8717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0B81DB4B8FD000C8717 /* AppDelegate.m */; };
 		B1EBB0BC1DB4B8FD000C8717 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB0B91DB4B8FD000C8717 /* Info.plist */; };
-		B1EBB0C21DB4BA2F000C8717 /* KDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0C11DB4BA2F000C8717 /* KDMainViewController.m */; };
 		B1EBB0CB1DB4D2B4000C8717 /* KDGuillotineMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0CA1DB4D2B4000C8717 /* KDGuillotineMenu.m */; };
-		B1EBB0CE1DB5B18D000C8717 /* KDProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0CD1DB5B18D000C8717 /* KDProfileViewController.m */; };
-		B1EBB0D11DB5B19B000C8717 /* KDMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0D01DB5B19B000C8717 /* KDMessageViewController.m */; };
-		B1EBB0D41DB5B1B5000C8717 /* KDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0D31DB5B1B5000C8717 /* KDSettingViewController.m */; };
-		B1EBB0D71DB5B1C7000C8717 /* KDSouSouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB0D61DB5B1C7000C8717 /* KDSouSouViewController.m */; };
 		B1EBB1021DB5BBE1000C8717 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EBB1011DB5BBE1000C8717 /* libHyphenateFullSDK.a */; };
 		B1EBB1041DB5BC2C000C8717 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EBB1031DB5BC2C000C8717 /* CoreMedia.framework */; };
 		B1EBB1061DB5BC37000C8717 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EBB1051DB5BC37000C8717 /* AudioToolbox.framework */; };
@@ -33,11 +28,41 @@
 		B1EBB11D1DB5C0E9000C8717 /* CCDraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1191DB5C0E9000C8717 /* CCDraggableCardView.m */; };
 		B1EBB11E1DB5C0E9000C8717 /* CCDraggableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB11C1DB5C0E9000C8717 /* CCDraggableContainer.m */; };
 		B1EBB1211DB5C15C000C8717 /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1201DB5C15C000C8717 /* CustomCardView.m */; };
-		B1EBB1241DB5CAE9000C8717 /* KDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */; };
-		B1EBB1271DB5D950000C8717 /* KDRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */; };
-		B1EBB12A1DB5D962000C8717 /* KDLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1291DB5D962000C8717 /* KDLogViewController.m */; };
-		B1EBB12E1DB66218000C8717 /* KDRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */; };
-		B1EBB1301DB70E6A000C8717 /* KDLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */; };
+		B1EBB13D1DB72BA0000C8717 /* UIImage+KDimage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB13C1DB72BA0000C8717 /* UIImage+KDimage.m */; };
+		B1EBB1451DB75262000C8717 /* KDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1441DB75262000C8717 /* KDUser.m */; };
+		B1EBB1651DB8A489000C8717 /* KDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1481DB8A489000C8717 /* KDLoginViewController.m */; };
+		B1EBB1661DB8A489000C8717 /* KDLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB14A1DB8A489000C8717 /* KDLogViewController.m */; };
+		B1EBB1671DB8A489000C8717 /* KDLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB14B1DB8A489000C8717 /* KDLogViewController.storyboard */; };
+		B1EBB1681DB8A489000C8717 /* KDRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB14D1DB8A489000C8717 /* KDRegisterViewController.m */; };
+		B1EBB1691DB8A489000C8717 /* KDRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB14E1DB8A489000C8717 /* KDRegisterViewController.storyboard */; };
+		B1EBB16A1DB8A489000C8717 /* KDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1511DB8A489000C8717 /* KDMainViewController.m */; };
+		B1EBB16B1DB8A489000C8717 /* KDMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1541DB8A489000C8717 /* KDMessageViewController.m */; };
+		B1EBB16C1DB8A489000C8717 /* KDMessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1551DB8A489000C8717 /* KDMessageViewController.storyboard */; };
+		B1EBB16D1DB8A489000C8717 /* KDProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1581DB8A489000C8717 /* KDProfileViewController.m */; };
+		B1EBB16E1DB8A489000C8717 /* KDProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1591DB8A489000C8717 /* KDProfileViewController.storyboard */; };
+		B1EBB16F1DB8A489000C8717 /* KDProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB15B1DB8A489000C8717 /* KDProjectCell.m */; };
+		B1EBB1701DB8A489000C8717 /* KDProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB15C1DB8A489000C8717 /* KDProjectCell.xib */; };
+		B1EBB1711DB8A489000C8717 /* KDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB15F1DB8A489000C8717 /* KDSettingViewController.m */; };
+		B1EBB1721DB8A489000C8717 /* KDSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1601DB8A489000C8717 /* KDSettingViewController.storyboard */; };
+		B1EBB1731DB8A489000C8717 /* KDSouSouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1631DB8A489000C8717 /* KDSouSouViewController.m */; };
+		B1EBB1741DB8A489000C8717 /* KDSouSouViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1641DB8A489000C8717 /* KDSouSouViewController.storyboard */; };
+		B1EBB1771DB8A560000C8717 /* KDPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1761DB8A560000C8717 /* KDPhoto.m */; };
+		B1EBB17A1DB8B3DB000C8717 /* KDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1791DB8B3DB000C8717 /* KDInfoViewController.m */; };
+		B1EBB17C1DB8B712000C8717 /* KDInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB17B1DB8B712000C8717 /* KDInfoViewController.storyboard */; };
+		B1EBB17F1DB8C5B9000C8717 /* KDScrollViews.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB17E1DB8C5B9000C8717 /* KDScrollViews.m */; };
+		B1EBB1831DB9BE0C000C8717 /* KDMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1811DB9BE0C000C8717 /* KDMessageCell.m */; };
+		B1EBB1841DB9BE0C000C8717 /* KDMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1821DB9BE0C000C8717 /* KDMessageCell.xib */; };
+		B1EBB1871DB9C121000C8717 /* KDMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1861DB9C121000C8717 /* KDMessageModel.m */; };
+		B1EBB18A1DB9C54A000C8717 /* XMGChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1891DB9C54A000C8717 /* XMGChatController.m */; };
+		B1EBB18E1DB9C57E000C8717 /* XMGInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */; };
+		B1EBB18F1DB9C57E000C8717 /* XMGInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */; };
+		B1EBB1921DB9C591000C8717 /* XMGChat.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1911DB9C591000C8717 /* XMGChat.m */; };
+		B1EBB1951DB9C59F000C8717 /* XMGChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1941DB9C59F000C8717 /* XMGChatFrame.m */; };
+		B1EBB1981DB9C5AF000C8717 /* XMGChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1971DB9C5AF000C8717 /* XMGChatCell.m */; };
+		B1EBB19B1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB19A1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m */; };
+		B1EBB19E1DB9C601000C8717 /* XMGLongPressBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB19D1DB9C601000C8717 /* XMGLongPressBtn.m */; };
+		B1EBB1A31DB9C60F000C8717 /* NSString+YFTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1A01DB9C60F000C8717 /* NSString+YFTimestamp.m */; };
+		B1EBB1A41DB9C60F000C8717 /* UIImage+YFResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1A21DB9C60F000C8717 /* UIImage+YFResizing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,18 +74,8 @@
 		B1EBB0B71DB4B8FD000C8717 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1EBB0B81DB4B8FD000C8717 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1EBB0B91DB4B8FD000C8717 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1EBB0C01DB4BA2F000C8717 /* KDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMainViewController.h; sourceTree = "<group>"; };
-		B1EBB0C11DB4BA2F000C8717 /* KDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMainViewController.m; sourceTree = "<group>"; };
 		B1EBB0C91DB4D2B4000C8717 /* KDGuillotineMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDGuillotineMenu.h; sourceTree = "<group>"; };
 		B1EBB0CA1DB4D2B4000C8717 /* KDGuillotineMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDGuillotineMenu.m; sourceTree = "<group>"; };
-		B1EBB0CC1DB5B18D000C8717 /* KDProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDProfileViewController.h; sourceTree = "<group>"; };
-		B1EBB0CD1DB5B18D000C8717 /* KDProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDProfileViewController.m; sourceTree = "<group>"; };
-		B1EBB0CF1DB5B19B000C8717 /* KDMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMessageViewController.h; sourceTree = "<group>"; };
-		B1EBB0D01DB5B19B000C8717 /* KDMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMessageViewController.m; sourceTree = "<group>"; };
-		B1EBB0D21DB5B1B5000C8717 /* KDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDSettingViewController.h; sourceTree = "<group>"; };
-		B1EBB0D31DB5B1B5000C8717 /* KDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDSettingViewController.m; sourceTree = "<group>"; };
-		B1EBB0D51DB5B1C7000C8717 /* KDSouSouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDSouSouViewController.h; sourceTree = "<group>"; };
-		B1EBB0D61DB5B1C7000C8717 /* KDSouSouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDSouSouViewController.m; sourceTree = "<group>"; };
 		B1EBB0DA1DB5BBE1000C8717 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		B1EBB0DB1DB5BBE1000C8717 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		B1EBB0DC1DB5BBE1000C8717 /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -117,14 +132,66 @@
 		B1EBB11C1DB5C0E9000C8717 /* CCDraggableContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDraggableContainer.m; sourceTree = "<group>"; };
 		B1EBB11F1DB5C15C000C8717 /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
 		B1EBB1201DB5C15C000C8717 /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
-		B1EBB1221DB5CAE9000C8717 /* KDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoginViewController.h; sourceTree = "<group>"; };
-		B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLoginViewController.m; sourceTree = "<group>"; };
-		B1EBB1251DB5D950000C8717 /* KDRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDRegisterViewController.h; sourceTree = "<group>"; };
-		B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDRegisterViewController.m; sourceTree = "<group>"; };
-		B1EBB1281DB5D962000C8717 /* KDLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLogViewController.h; sourceTree = "<group>"; };
-		B1EBB1291DB5D962000C8717 /* KDLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLogViewController.m; sourceTree = "<group>"; };
-		B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDRegisterViewController.storyboard; sourceTree = "<group>"; };
-		B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDLogViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB13B1DB72BA0000C8717 /* UIImage+KDimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KDimage.h"; sourceTree = "<group>"; };
+		B1EBB13C1DB72BA0000C8717 /* UIImage+KDimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KDimage.m"; sourceTree = "<group>"; };
+		B1EBB1431DB75262000C8717 /* KDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDUser.h; sourceTree = "<group>"; };
+		B1EBB1441DB75262000C8717 /* KDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDUser.m; sourceTree = "<group>"; };
+		B1EBB1471DB8A489000C8717 /* KDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoginViewController.h; sourceTree = "<group>"; };
+		B1EBB1481DB8A489000C8717 /* KDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLoginViewController.m; sourceTree = "<group>"; };
+		B1EBB1491DB8A489000C8717 /* KDLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLogViewController.h; sourceTree = "<group>"; };
+		B1EBB14A1DB8A489000C8717 /* KDLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLogViewController.m; sourceTree = "<group>"; };
+		B1EBB14B1DB8A489000C8717 /* KDLogViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDLogViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB14C1DB8A489000C8717 /* KDRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDRegisterViewController.h; sourceTree = "<group>"; };
+		B1EBB14D1DB8A489000C8717 /* KDRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDRegisterViewController.m; sourceTree = "<group>"; };
+		B1EBB14E1DB8A489000C8717 /* KDRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDRegisterViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB1501DB8A489000C8717 /* KDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMainViewController.h; sourceTree = "<group>"; };
+		B1EBB1511DB8A489000C8717 /* KDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMainViewController.m; sourceTree = "<group>"; };
+		B1EBB1531DB8A489000C8717 /* KDMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMessageViewController.h; sourceTree = "<group>"; };
+		B1EBB1541DB8A489000C8717 /* KDMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMessageViewController.m; sourceTree = "<group>"; };
+		B1EBB1551DB8A489000C8717 /* KDMessageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDMessageViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB1571DB8A489000C8717 /* KDProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDProfileViewController.h; sourceTree = "<group>"; };
+		B1EBB1581DB8A489000C8717 /* KDProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDProfileViewController.m; sourceTree = "<group>"; };
+		B1EBB1591DB8A489000C8717 /* KDProfileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDProfileViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB15A1DB8A489000C8717 /* KDProjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDProjectCell.h; sourceTree = "<group>"; };
+		B1EBB15B1DB8A489000C8717 /* KDProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDProjectCell.m; sourceTree = "<group>"; };
+		B1EBB15C1DB8A489000C8717 /* KDProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KDProjectCell.xib; sourceTree = "<group>"; };
+		B1EBB15E1DB8A489000C8717 /* KDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDSettingViewController.h; sourceTree = "<group>"; };
+		B1EBB15F1DB8A489000C8717 /* KDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDSettingViewController.m; sourceTree = "<group>"; };
+		B1EBB1601DB8A489000C8717 /* KDSettingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDSettingViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB1621DB8A489000C8717 /* KDSouSouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDSouSouViewController.h; sourceTree = "<group>"; };
+		B1EBB1631DB8A489000C8717 /* KDSouSouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDSouSouViewController.m; sourceTree = "<group>"; };
+		B1EBB1641DB8A489000C8717 /* KDSouSouViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDSouSouViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB1751DB8A560000C8717 /* KDPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDPhoto.h; sourceTree = "<group>"; };
+		B1EBB1761DB8A560000C8717 /* KDPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDPhoto.m; sourceTree = "<group>"; };
+		B1EBB1781DB8B3DB000C8717 /* KDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDInfoViewController.h; sourceTree = "<group>"; };
+		B1EBB1791DB8B3DB000C8717 /* KDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDInfoViewController.m; sourceTree = "<group>"; };
+		B1EBB17B1DB8B712000C8717 /* KDInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KDInfoViewController.storyboard; sourceTree = "<group>"; };
+		B1EBB17D1DB8C5B9000C8717 /* KDScrollViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDScrollViews.h; sourceTree = "<group>"; };
+		B1EBB17E1DB8C5B9000C8717 /* KDScrollViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDScrollViews.m; sourceTree = "<group>"; };
+		B1EBB1801DB9BE0C000C8717 /* KDMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMessageCell.h; sourceTree = "<group>"; };
+		B1EBB1811DB9BE0C000C8717 /* KDMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMessageCell.m; sourceTree = "<group>"; };
+		B1EBB1821DB9BE0C000C8717 /* KDMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KDMessageCell.xib; sourceTree = "<group>"; };
+		B1EBB1851DB9C121000C8717 /* KDMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMessageModel.h; sourceTree = "<group>"; };
+		B1EBB1861DB9C121000C8717 /* KDMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMessageModel.m; sourceTree = "<group>"; };
+		B1EBB1881DB9C54A000C8717 /* XMGChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatController.h; sourceTree = "<group>"; };
+		B1EBB1891DB9C54A000C8717 /* XMGChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatController.m; sourceTree = "<group>"; };
+		B1EBB18B1DB9C57E000C8717 /* XMGInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGInputView.h; sourceTree = "<group>"; };
+		B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGInputView.m; sourceTree = "<group>"; };
+		B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGInputView.xib; sourceTree = "<group>"; };
+		B1EBB1901DB9C591000C8717 /* XMGChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChat.h; sourceTree = "<group>"; };
+		B1EBB1911DB9C591000C8717 /* XMGChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChat.m; sourceTree = "<group>"; };
+		B1EBB1931DB9C59F000C8717 /* XMGChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatFrame.h; sourceTree = "<group>"; };
+		B1EBB1941DB9C59F000C8717 /* XMGChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatFrame.m; sourceTree = "<group>"; };
+		B1EBB1961DB9C5AF000C8717 /* XMGChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatCell.h; sourceTree = "<group>"; };
+		B1EBB1971DB9C5AF000C8717 /* XMGChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatCell.m; sourceTree = "<group>"; };
+		B1EBB1991DB9C5B9000C8717 /* XMGMoreInputKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMoreInputKeyboardView.h; sourceTree = "<group>"; };
+		B1EBB19A1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMoreInputKeyboardView.m; sourceTree = "<group>"; };
+		B1EBB19C1DB9C601000C8717 /* XMGLongPressBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLongPressBtn.h; sourceTree = "<group>"; };
+		B1EBB19D1DB9C601000C8717 /* XMGLongPressBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLongPressBtn.m; sourceTree = "<group>"; };
+		B1EBB19F1DB9C60F000C8717 /* NSString+YFTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YFTimestamp.h"; sourceTree = "<group>"; };
+		B1EBB1A01DB9C60F000C8717 /* NSString+YFTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YFTimestamp.m"; sourceTree = "<group>"; };
+		B1EBB1A11DB9C60F000C8717 /* UIImage+YFResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFResizing.h"; sourceTree = "<group>"; };
+		B1EBB1A21DB9C60F000C8717 /* UIImage+YFResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFResizing.m"; sourceTree = "<group>"; };
 		C3CBB9C7B7CC96315C38AE96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E7937B6F89056175393CED5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +287,12 @@
 			isa = PBXGroup;
 			children = (
 				B1EBB0B31DB4B8FD000C8717 /* Controllers */,
+				B1EBB1461DB8A489000C8717 /* Login */,
+				B1EBB14F1DB8A489000C8717 /* Main */,
+				B1EBB1521DB8A489000C8717 /* Message */,
+				B1EBB1561DB8A489000C8717 /* Profile */,
+				B1EBB15D1DB8A489000C8717 /* Setting */,
+				B1EBB1611DB8A489000C8717 /* Sousou */,
 				B1EBB0B41DB4B8FD000C8717 /* Lib */,
 				B1EBB0B51DB4B8FD000C8717 /* Models */,
 				B1EBB0B61DB4B8FD000C8717 /* Other */,
@@ -233,24 +306,6 @@
 			children = (
 				B1EBB0C91DB4D2B4000C8717 /* KDGuillotineMenu.h */,
 				B1EBB0CA1DB4D2B4000C8717 /* KDGuillotineMenu.m */,
-				B1EBB0C01DB4BA2F000C8717 /* KDMainViewController.h */,
-				B1EBB0C11DB4BA2F000C8717 /* KDMainViewController.m */,
-				B1EBB0CC1DB5B18D000C8717 /* KDProfileViewController.h */,
-				B1EBB0CD1DB5B18D000C8717 /* KDProfileViewController.m */,
-				B1EBB0CF1DB5B19B000C8717 /* KDMessageViewController.h */,
-				B1EBB0D01DB5B19B000C8717 /* KDMessageViewController.m */,
-				B1EBB0D21DB5B1B5000C8717 /* KDSettingViewController.h */,
-				B1EBB0D31DB5B1B5000C8717 /* KDSettingViewController.m */,
-				B1EBB0D51DB5B1C7000C8717 /* KDSouSouViewController.h */,
-				B1EBB0D61DB5B1C7000C8717 /* KDSouSouViewController.m */,
-				B1EBB1221DB5CAE9000C8717 /* KDLoginViewController.h */,
-				B1EBB1231DB5CAE9000C8717 /* KDLoginViewController.m */,
-				B1EBB1251DB5D950000C8717 /* KDRegisterViewController.h */,
-				B1EBB1261DB5D950000C8717 /* KDRegisterViewController.m */,
-				B1EBB12D1DB66218000C8717 /* KDRegisterViewController.storyboard */,
-				B1EBB1281DB5D962000C8717 /* KDLogViewController.h */,
-				B1EBB1291DB5D962000C8717 /* KDLogViewController.m */,
-				B1EBB12F1DB70E6A000C8717 /* KDLogViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +322,12 @@
 		B1EBB0B51DB4B8FD000C8717 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B1EBB1431DB75262000C8717 /* KDUser.h */,
+				B1EBB1441DB75262000C8717 /* KDUser.m */,
+				B1EBB1751DB8A560000C8717 /* KDPhoto.h */,
+				B1EBB1761DB8A560000C8717 /* KDPhoto.m */,
+				B1EBB1851DB9C121000C8717 /* KDMessageModel.h */,
+				B1EBB1861DB9C121000C8717 /* KDMessageModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +338,8 @@
 				B1EBB0B71DB4B8FD000C8717 /* AppDelegate.h */,
 				B1EBB0B81DB4B8FD000C8717 /* AppDelegate.m */,
 				B1EBB0B91DB4B8FD000C8717 /* Info.plist */,
+				B1EBB13B1DB72BA0000C8717 /* UIImage+KDimage.h */,
+				B1EBB13C1DB72BA0000C8717 /* UIImage+KDimage.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -284,8 +347,13 @@
 		B1EBB0BA1DB4B8FD000C8717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1EBB18B1DB9C57E000C8717 /* XMGInputView.h */,
+				B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */,
+				B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */,
 				B1EBB11F1DB5C15C000C8717 /* CustomCardView.h */,
 				B1EBB1201DB5C15C000C8717 /* CustomCardView.m */,
+				B1EBB17D1DB8C5B9000C8717 /* KDScrollViews.h */,
+				B1EBB17E1DB8C5B9000C8717 /* KDScrollViews.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +432,101 @@
 			path = CCDraggableCard;
 			sourceTree = "<group>";
 		};
+		B1EBB1461DB8A489000C8717 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB1471DB8A489000C8717 /* KDLoginViewController.h */,
+				B1EBB1481DB8A489000C8717 /* KDLoginViewController.m */,
+				B1EBB1491DB8A489000C8717 /* KDLogViewController.h */,
+				B1EBB14A1DB8A489000C8717 /* KDLogViewController.m */,
+				B1EBB14B1DB8A489000C8717 /* KDLogViewController.storyboard */,
+				B1EBB14C1DB8A489000C8717 /* KDRegisterViewController.h */,
+				B1EBB14D1DB8A489000C8717 /* KDRegisterViewController.m */,
+				B1EBB14E1DB8A489000C8717 /* KDRegisterViewController.storyboard */,
+			);
+			name = Login;
+			path = Controllers/Login;
+			sourceTree = "<group>";
+		};
+		B1EBB14F1DB8A489000C8717 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB1501DB8A489000C8717 /* KDMainViewController.h */,
+				B1EBB1511DB8A489000C8717 /* KDMainViewController.m */,
+			);
+			name = Main;
+			path = Controllers/Main;
+			sourceTree = "<group>";
+		};
+		B1EBB1521DB8A489000C8717 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB19F1DB9C60F000C8717 /* NSString+YFTimestamp.h */,
+				B1EBB1A01DB9C60F000C8717 /* NSString+YFTimestamp.m */,
+				B1EBB1A11DB9C60F000C8717 /* UIImage+YFResizing.h */,
+				B1EBB1A21DB9C60F000C8717 /* UIImage+YFResizing.m */,
+				B1EBB19C1DB9C601000C8717 /* XMGLongPressBtn.h */,
+				B1EBB19D1DB9C601000C8717 /* XMGLongPressBtn.m */,
+				B1EBB1991DB9C5B9000C8717 /* XMGMoreInputKeyboardView.h */,
+				B1EBB19A1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m */,
+				B1EBB1961DB9C5AF000C8717 /* XMGChatCell.h */,
+				B1EBB1971DB9C5AF000C8717 /* XMGChatCell.m */,
+				B1EBB1931DB9C59F000C8717 /* XMGChatFrame.h */,
+				B1EBB1941DB9C59F000C8717 /* XMGChatFrame.m */,
+				B1EBB1901DB9C591000C8717 /* XMGChat.h */,
+				B1EBB1911DB9C591000C8717 /* XMGChat.m */,
+				B1EBB1881DB9C54A000C8717 /* XMGChatController.h */,
+				B1EBB1891DB9C54A000C8717 /* XMGChatController.m */,
+				B1EBB1531DB8A489000C8717 /* KDMessageViewController.h */,
+				B1EBB1541DB8A489000C8717 /* KDMessageViewController.m */,
+				B1EBB1551DB8A489000C8717 /* KDMessageViewController.storyboard */,
+				B1EBB1801DB9BE0C000C8717 /* KDMessageCell.h */,
+				B1EBB1811DB9BE0C000C8717 /* KDMessageCell.m */,
+				B1EBB1821DB9BE0C000C8717 /* KDMessageCell.xib */,
+			);
+			name = Message;
+			path = Controllers/Message;
+			sourceTree = "<group>";
+		};
+		B1EBB1561DB8A489000C8717 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB1571DB8A489000C8717 /* KDProfileViewController.h */,
+				B1EBB1581DB8A489000C8717 /* KDProfileViewController.m */,
+				B1EBB1591DB8A489000C8717 /* KDProfileViewController.storyboard */,
+				B1EBB15A1DB8A489000C8717 /* KDProjectCell.h */,
+				B1EBB15B1DB8A489000C8717 /* KDProjectCell.m */,
+				B1EBB15C1DB8A489000C8717 /* KDProjectCell.xib */,
+			);
+			name = Profile;
+			path = Controllers/Profile;
+			sourceTree = "<group>";
+		};
+		B1EBB15D1DB8A489000C8717 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB15E1DB8A489000C8717 /* KDSettingViewController.h */,
+				B1EBB15F1DB8A489000C8717 /* KDSettingViewController.m */,
+				B1EBB1601DB8A489000C8717 /* KDSettingViewController.storyboard */,
+			);
+			name = Setting;
+			path = Controllers/Setting;
+			sourceTree = "<group>";
+		};
+		B1EBB1611DB8A489000C8717 /* Sousou */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB1621DB8A489000C8717 /* KDSouSouViewController.h */,
+				B1EBB1631DB8A489000C8717 /* KDSouSouViewController.m */,
+				B1EBB1641DB8A489000C8717 /* KDSouSouViewController.storyboard */,
+				B1EBB1781DB8B3DB000C8717 /* KDInfoViewController.h */,
+				B1EBB1791DB8B3DB000C8717 /* KDInfoViewController.m */,
+				B1EBB17B1DB8B712000C8717 /* KDInfoViewController.storyboard */,
+			);
+			name = Sousou;
+			path = Controllers/Sousou;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,11 +588,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EBB1701DB8A489000C8717 /* KDProjectCell.xib in Resources */,
 				B176F59A1DB4B769008D91F2 /* LaunchScreen.storyboard in Resources */,
+				B1EBB16E1DB8A489000C8717 /* KDProfileViewController.storyboard in Resources */,
+				B1EBB1671DB8A489000C8717 /* KDLogViewController.storyboard in Resources */,
 				B176F5971DB4B769008D91F2 /* Assets.xcassets in Resources */,
-				B1EBB12E1DB66218000C8717 /* KDRegisterViewController.storyboard in Resources */,
+				B1EBB1691DB8A489000C8717 /* KDRegisterViewController.storyboard in Resources */,
+				B1EBB18F1DB9C57E000C8717 /* XMGInputView.xib in Resources */,
+				B1EBB1841DB9BE0C000C8717 /* KDMessageCell.xib in Resources */,
+				B1EBB16C1DB8A489000C8717 /* KDMessageViewController.storyboard in Resources */,
+				B1EBB1721DB8A489000C8717 /* KDSettingViewController.storyboard in Resources */,
+				B1EBB1741DB8A489000C8717 /* KDSouSouViewController.storyboard in Resources */,
 				B1EBB0BC1DB4B8FD000C8717 /* Info.plist in Resources */,
-				B1EBB1301DB70E6A000C8717 /* KDLogViewController.storyboard in Resources */,
+				B1EBB17C1DB8B712000C8717 /* KDInfoViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,20 +659,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EBB1711DB8A489000C8717 /* KDSettingViewController.m in Sources */,
+				B1EBB1651DB8A489000C8717 /* KDLoginViewController.m in Sources */,
+				B1EBB17F1DB8C5B9000C8717 /* KDScrollViews.m in Sources */,
 				B1EBB1211DB5C15C000C8717 /* CustomCardView.m in Sources */,
+				B1EBB19B1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m in Sources */,
+				B1EBB18A1DB9C54A000C8717 /* XMGChatController.m in Sources */,
+				B1EBB13D1DB72BA0000C8717 /* UIImage+KDimage.m in Sources */,
+				B1EBB1951DB9C59F000C8717 /* XMGChatFrame.m in Sources */,
 				B1EBB0CB1DB4D2B4000C8717 /* KDGuillotineMenu.m in Sources */,
-				B1EBB12A1DB5D962000C8717 /* KDLogViewController.m in Sources */,
+				B1EBB1661DB8A489000C8717 /* KDLogViewController.m in Sources */,
+				B1EBB1981DB9C5AF000C8717 /* XMGChatCell.m in Sources */,
+				B1EBB18E1DB9C57E000C8717 /* XMGInputView.m in Sources */,
+				B1EBB1731DB8A489000C8717 /* KDSouSouViewController.m in Sources */,
 				B1EBB11D1DB5C0E9000C8717 /* CCDraggableCardView.m in Sources */,
-				B1EBB0C21DB4BA2F000C8717 /* KDMainViewController.m in Sources */,
+				B1EBB16B1DB8A489000C8717 /* KDMessageViewController.m in Sources */,
+				B1EBB1771DB8A560000C8717 /* KDPhoto.m in Sources */,
+				B1EBB17A1DB8B3DB000C8717 /* KDInfoViewController.m in Sources */,
 				B1EBB11E1DB5C0E9000C8717 /* CCDraggableContainer.m in Sources */,
-				B1EBB0CE1DB5B18D000C8717 /* KDProfileViewController.m in Sources */,
-				B1EBB1271DB5D950000C8717 /* KDRegisterViewController.m in Sources */,
+				B1EBB1681DB8A489000C8717 /* KDRegisterViewController.m in Sources */,
+				B1EBB16D1DB8A489000C8717 /* KDProfileViewController.m in Sources */,
+				B1EBB16A1DB8A489000C8717 /* KDMainViewController.m in Sources */,
+				B1EBB1871DB9C121000C8717 /* KDMessageModel.m in Sources */,
+				B1EBB1921DB9C591000C8717 /* XMGChat.m in Sources */,
+				B1EBB1A41DB9C60F000C8717 /* UIImage+YFResizing.m in Sources */,
+				B1EBB19E1DB9C601000C8717 /* XMGLongPressBtn.m in Sources */,
 				B1EBB0BB1DB4B8FD000C8717 /* AppDelegate.m in Sources */,
+				B1EBB1A31DB9C60F000C8717 /* NSString+YFTimestamp.m in Sources */,
+				B1EBB1831DB9BE0C000C8717 /* KDMessageCell.m in Sources */,
 				B176F58C1DB4B769008D91F2 /* main.m in Sources */,
-				B1EBB0D11DB5B19B000C8717 /* KDMessageViewController.m in Sources */,
-				B1EBB1241DB5CAE9000C8717 /* KDLoginViewController.m in Sources */,
-				B1EBB0D41DB5B1B5000C8717 /* KDSettingViewController.m in Sources */,
-				B1EBB0D71DB5B1C7000C8717 /* KDSouSouViewController.m in Sources */,
+				B1EBB16F1DB8A489000C8717 /* KDProjectCell.m in Sources */,
+				B1EBB1451DB75262000C8717 /* KDUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

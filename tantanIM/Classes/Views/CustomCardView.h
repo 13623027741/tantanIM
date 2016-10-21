@@ -8,8 +8,10 @@
 
 #import "CCDraggableCardView.h"
 
+@class KDPhoto;
+
 @interface CustomCardView : CCDraggableCardView
 
-- (void)installData:(NSDictionary *)element;
+- (void)installData:(KDPhoto *)photo;
 
 @end

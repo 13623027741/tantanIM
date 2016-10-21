@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10109" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMGInputView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojz-Lx-Zz6">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Cb0-hy-j1D"/>
+                        <constraint firstAttribute="width" constant="44" id="lXk-GR-Ubi"/>
+                    </constraints>
+                    <state key="normal" image="ToolViewInputVoice"/>
+                    <state key="selected" image="ToolViewInputText"/>
+                    <connections>
+                        <action selector="changeInputStyle:" destination="iN0-l3-epB" eventType="touchUpInside" id="maQ-wo-yCZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE0-VZ-HHV">
+                    <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="7V6-lv-fqh"/>
+                    </constraints>
+                    <state key="normal" image="TypeSelectorBtn_Black"/>
+                    <connections>
+                        <action selector="moreBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XYd-vu-QsA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9g-f1-ahj">
+                    <rect key="frame" x="232" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Sd2-AW-dg3"/>
+                    </constraints>
+                    <state key="normal" image="ToolViewEmotion"/>
+                    <connections>
+                        <action selector="empressOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0eH-3I-81a"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92L-HA-CYM">
+                    <rect key="frame" x="44" y="5" width="188" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdf-Jk-PSD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="YRn-DW-Ehv"/>
+                    </constraints>
+                </view>
+                <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7s-uz-aV3">
+                    <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="iux-lK-0r4"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi6-tl-HS7">
+                    <rect key="frame" x="44" y="5" width="188" height="34"/>
+                    <state key="normal" title="按住 说话">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" title="松开 说话"/>
+                    <connections>
+                        <action selector="voiceTouchDown:" destination="iN0-l3-epB" eventType="touchDown" id="zra-xf-FZJ"/>
+                        <action selector="voiceTouchDragOucside" destination="iN0-l3-epB" eventType="touchDragOutside" id="d2X-z2-sB4"/>
+                        <action selector="voiceTouchUpInside" destination="iN0-l3-epB" eventType="touchUpInside" id="RY2-5a-2T8"/>
+                        <action selector="voiceTouchUpOutside" destination="iN0-l3-epB" eventType="touchUpOutside" id="WcH-1X-t5b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KE0-VZ-HHV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4MD-oG-lyr"/>
+                <constraint firstItem="o9g-f1-ahj" firstAttribute="bottom" secondItem="KE0-VZ-HHV" secondAttribute="bottom" id="4yv-J0-5Ud"/>
+                <constraint firstAttribute="trailing" secondItem="u7s-uz-aV3" secondAttribute="trailing" id="BUe-A0-Kft"/>
+                <constraint firstItem="vi6-tl-HS7" firstAttribute="bottom" secondItem="92L-HA-CYM" secondAttribute="bottom" id="E67-kv-7eO"/>
+                <constraint firstItem="92L-HA-CYM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="EkV-jF-cVQ"/>
+                <constraint firstItem="ojz-Lx-Zz6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hwh-f9-2WX"/>
+                <constraint firstItem="vi6-tl-HS7" firstAttribute="trailing" secondItem="92L-HA-CYM" secondAttribute="trailing" id="LeX-cP-8wp"/>
+                <constraint firstItem="KE0-VZ-HHV" firstAttribute="leading" secondItem="o9g-f1-ahj" secondAttribute="trailing" id="M6J-Do-jWk"/>
+                <constraint firstAttribute="bottom" secondItem="KE0-VZ-HHV" secondAttribute="bottom" id="O2D-fD-qDJ"/>
+                <constraint firstItem="ojz-Lx-Zz6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PgJ-iq-aRs"/>
+                <constraint firstAttribute="bottom" secondItem="92L-HA-CYM" secondAttribute="bottom" constant="5" id="Qcv-zn-54a"/>
+                <constraint firstItem="vi6-tl-HS7" firstAttribute="top" secondItem="92L-HA-CYM" secondAttribute="top" id="Ukk-iB-vTU"/>
+                <constraint firstItem="fdf-Jk-PSD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WXG-rQ-f43"/>
+                <constraint firstAttribute="trailing" secondItem="fdf-Jk-PSD" secondAttribute="trailing" id="WYY-fY-gDN"/>
+                <constraint firstAttribute="trailing" secondItem="KE0-VZ-HHV" secondAttribute="trailing" id="aqK-iQ-xXb"/>
+                <constraint firstAttribute="bottom" secondItem="u7s-uz-aV3" secondAttribute="bottom" id="eC4-th-Eop"/>
+                <constraint firstItem="o9g-f1-ahj" firstAttribute="leading" secondItem="92L-HA-CYM" secondAttribute="trailing" id="eIT-vO-D0z"/>
+                <constraint firstItem="u7s-uz-aV3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gXX-DM-hOS"/>
+                <constraint firstItem="o9g-f1-ahj" firstAttribute="top" secondItem="KE0-VZ-HHV" secondAttribute="top" id="hlS-Yu-VjD"/>
+                <constraint firstAttribute="bottom" secondItem="ojz-Lx-Zz6" secondAttribute="bottom" id="i53-49-9ij"/>
+                <constraint firstItem="92L-HA-CYM" firstAttribute="leading" secondItem="ojz-Lx-Zz6" secondAttribute="trailing" id="kci-CG-phI"/>
+                <constraint firstItem="vi6-tl-HS7" firstAttribute="leading" secondItem="92L-HA-CYM" secondAttribute="leading" id="moB-yg-atZ"/>
+                <constraint firstItem="o9g-f1-ahj" firstAttribute="height" secondItem="KE0-VZ-HHV" secondAttribute="height" id="mzY-bJ-VVN"/>
+                <constraint firstItem="fdf-Jk-PSD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qBY-6g-aQT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputStyleBtn" destination="ojz-Lx-Zz6" id="3on-Bb-Aij"/>
+                <outlet property="textField" destination="92L-HA-CYM" id="A6h-ZB-bdA"/>
+                <outlet property="voiceBtn" destination="vi6-tl-HS7" id="kNK-Mg-x7m"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewInputText" width="35" height="35"/>
+        <image name="ToolViewInputVoice" width="35" height="35"/>
+        <image name="TypeSelectorBtn_Black" width="35" height="35"/>
+    </resources>
+</document>
