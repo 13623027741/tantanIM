@@ -37,7 +37,6 @@
     [self loadUI];
     
     
-    
 }
 
 - (void)loadUI {

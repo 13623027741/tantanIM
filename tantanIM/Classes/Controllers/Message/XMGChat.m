@@ -1,10 +1,3 @@
-//
-//  XMGChat.m
-//  01-EaseMobSDK导入
-//
-//  Created by xiaomage on 16/5/22.
-//  Copyright © 2016年 小码哥. All rights reserved.
-//
 
 #import "XMGChat.h"
 #import "NSString+YFTimestamp.h"
@@ -73,13 +66,13 @@
     NSString *loginUser = [EMClient sharedClient].currentUsername;
     if ([loginUser isEqualToString:emsg.from]) {
         self.me = YES;
-        self.userIcon = @"xhr";
+        self.userIcon = @"add_friend_icon_offical";
         self.contectTextBackgroundIma = [UIImage imageNamed: @"SenderTextNodeBkg"];
         self.contectTextBackgroundHLIma = [UIImage imageNamed: @"SenderTextNodeBkgHL"];
     }else
     {
         self.me = NO;
-        self.userIcon = @"add_friend_icon_offical";
+        self.userIcon = @"image_3";
         self.contectTextBackgroundIma = [UIImage imageNamed: @"ReceiverTextNodeBkg"];
         self.contectTextBackgroundHLIma = [UIImage imageNamed: @"ReceiverTextNodeBkgHL"];
     }

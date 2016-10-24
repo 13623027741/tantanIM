@@ -1,10 +1,3 @@
-//
-//  XMGChatController.m
-//  01-EaseMobSDK导入
-//
-//  Created by xiaomage on 16/5/22.
-//  Copyright © 2016年 小码哥. All rights reserved.
-//
 
 /*
  1.tabbar的隐藏显示切换
@@ -181,6 +174,37 @@
     
     // 获取会话中的聊天记录
     
+    NSInteger time = (NSInteger)[[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
+    
+//    NSLog(@"--conversation-[%@]--time[%ld]---",self.conversation.conversationId,time);
+    
+    
+    [self.conversation loadMessagesWithType:EMMessageBodyTypeText timestamp:time count:10 fromUser:self.conversation.conversationId searchDirection:EMMessageSearchDirectionDown completion:^(NSArray *aMessages, EMError *aError) {
+        if (aError) {
+            NSLog(@"--错误---%@--",aError);
+        }
+        for (EMMessage* message in aMessages) {
+            [self xmg_reloadChatMsgs:message];
+        }
+    }];
+    
+    NSArray* arr = [[EMClient sharedClient].chatManager getAllConversations];
+    
+    for (EMConversation* conversation in arr) {
+        if ([conversation.conversationId isEqualToString:[EMClient sharedClient].currentUsername]) {
+            if ([conversation.latestMessage.to isEqualToString:self.conversation.conversationId]) {
+                
+                [conversation loadMessagesWithType:EMMessageBodyTypeText timestamp:time count:10 fromUser:conversation.conversationId searchDirection:EMMessageSearchDirectionDown completion:^(NSArray *aMessages, EMError *aError) {
+                    if (aError) {
+                        NSLog(@"--错误---%@--",aError);
+                    }
+                    for (EMMessage* message in aMessages) {
+                        [self xmg_reloadChatMsgs:message];
+                    }
+                }];
+            }
+        }
+    }
     
     // 监听键盘弹出,对相应的布局做修改
     [self xmg_observerKeyboardFrameChange];
@@ -201,6 +225,7 @@
     self.navigationController.tabBarController.tabBar.hidden = YES;
     
     self.title = self.chatter;
+    
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -502,14 +527,6 @@
         
         NSLog(@"body.text -> %@",text.text);
     }
-    
-//    EMMessage* message = [aMessages lastObject];
-//    EMTextMessageBody* body = (EMTextMessageBody*)message.body;
-//    
-//    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:body.text message:message.conversationId delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-//    
-//    [alertView show];
-    
     
     
 }

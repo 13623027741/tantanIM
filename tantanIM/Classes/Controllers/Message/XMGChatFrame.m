@@ -1,20 +1,4 @@
-//
-//  XMGChatFrame.m
-//  01-EaseMobSDK导入
-//
-//  Created by xiaomage on 16/5/22.
-//  Copyright © 2016年 小码哥. All rights reserved.
-//
 
-/**
- 完善分析
- 1.修改背景颜色
- 
- 2.将cell的选中状态和分割线取消
- 
- 3.整改内容button的边距
- 
- */
 
 #import "XMGChatFrame.h"
 #import "XMGChat.h"

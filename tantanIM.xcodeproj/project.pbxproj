@@ -54,8 +54,6 @@
 		B1EBB1841DB9BE0C000C8717 /* KDMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1821DB9BE0C000C8717 /* KDMessageCell.xib */; };
 		B1EBB1871DB9C121000C8717 /* KDMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1861DB9C121000C8717 /* KDMessageModel.m */; };
 		B1EBB18A1DB9C54A000C8717 /* XMGChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1891DB9C54A000C8717 /* XMGChatController.m */; };
-		B1EBB18E1DB9C57E000C8717 /* XMGInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */; };
-		B1EBB18F1DB9C57E000C8717 /* XMGInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */; };
 		B1EBB1921DB9C591000C8717 /* XMGChat.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1911DB9C591000C8717 /* XMGChat.m */; };
 		B1EBB1951DB9C59F000C8717 /* XMGChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1941DB9C59F000C8717 /* XMGChatFrame.m */; };
 		B1EBB1981DB9C5AF000C8717 /* XMGChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1971DB9C5AF000C8717 /* XMGChatCell.m */; };
@@ -63,6 +61,11 @@
 		B1EBB19E1DB9C601000C8717 /* XMGLongPressBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB19D1DB9C601000C8717 /* XMGLongPressBtn.m */; };
 		B1EBB1A31DB9C60F000C8717 /* NSString+YFTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1A01DB9C60F000C8717 /* NSString+YFTimestamp.m */; };
 		B1EBB1A41DB9C60F000C8717 /* UIImage+YFResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1A21DB9C60F000C8717 /* UIImage+YFResizing.m */; };
+		B1EBB1A81DBA11F4000C8717 /* XMGInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1A61DBA11F4000C8717 /* XMGInputView.m */; };
+		B1EBB1A91DBA11F4000C8717 /* XMGInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EBB1A71DBA11F4000C8717 /* XMGInputView.xib */; };
+		B1EBB1AD1DBA15A0000C8717 /* KDDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1AC1DBA15A0000C8717 /* KDDataTool.m */; };
+		B1EBB1B01DBA16BD000C8717 /* KDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1AF1DBA16BD000C8717 /* KDDataModel.m */; };
+		B1EBB1B31DBDAFF3000C8717 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBB1B21DBDAFF3000C8717 /* HttpTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,9 +178,6 @@
 		B1EBB1861DB9C121000C8717 /* KDMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMessageModel.m; sourceTree = "<group>"; };
 		B1EBB1881DB9C54A000C8717 /* XMGChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatController.h; sourceTree = "<group>"; };
 		B1EBB1891DB9C54A000C8717 /* XMGChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatController.m; sourceTree = "<group>"; };
-		B1EBB18B1DB9C57E000C8717 /* XMGInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGInputView.h; sourceTree = "<group>"; };
-		B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGInputView.m; sourceTree = "<group>"; };
-		B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGInputView.xib; sourceTree = "<group>"; };
 		B1EBB1901DB9C591000C8717 /* XMGChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChat.h; sourceTree = "<group>"; };
 		B1EBB1911DB9C591000C8717 /* XMGChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChat.m; sourceTree = "<group>"; };
 		B1EBB1931DB9C59F000C8717 /* XMGChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatFrame.h; sourceTree = "<group>"; };
@@ -192,6 +192,15 @@
 		B1EBB1A01DB9C60F000C8717 /* NSString+YFTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YFTimestamp.m"; sourceTree = "<group>"; };
 		B1EBB1A11DB9C60F000C8717 /* UIImage+YFResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFResizing.h"; sourceTree = "<group>"; };
 		B1EBB1A21DB9C60F000C8717 /* UIImage+YFResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFResizing.m"; sourceTree = "<group>"; };
+		B1EBB1A51DBA11F4000C8717 /* XMGInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGInputView.h; sourceTree = "<group>"; };
+		B1EBB1A61DBA11F4000C8717 /* XMGInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGInputView.m; sourceTree = "<group>"; };
+		B1EBB1A71DBA11F4000C8717 /* XMGInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGInputView.xib; sourceTree = "<group>"; };
+		B1EBB1AB1DBA15A0000C8717 /* KDDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDDataTool.h; sourceTree = "<group>"; };
+		B1EBB1AC1DBA15A0000C8717 /* KDDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDDataTool.m; sourceTree = "<group>"; };
+		B1EBB1AE1DBA16BD000C8717 /* KDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDDataModel.h; sourceTree = "<group>"; };
+		B1EBB1AF1DBA16BD000C8717 /* KDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDDataModel.m; sourceTree = "<group>"; };
+		B1EBB1B11DBDAFF3000C8717 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		B1EBB1B21DBDAFF3000C8717 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		C3CBB9C7B7CC96315C38AE96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E7937B6F89056175393CED5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +295,7 @@
 		B1EBB0B21DB4B8FD000C8717 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B1EBB1AA1DBA1593000C8717 /* Tool */,
 				B1EBB0B31DB4B8FD000C8717 /* Controllers */,
 				B1EBB1461DB8A489000C8717 /* Login */,
 				B1EBB14F1DB8A489000C8717 /* Main */,
@@ -328,6 +338,8 @@
 				B1EBB1761DB8A560000C8717 /* KDPhoto.m */,
 				B1EBB1851DB9C121000C8717 /* KDMessageModel.h */,
 				B1EBB1861DB9C121000C8717 /* KDMessageModel.m */,
+				B1EBB1AE1DBA16BD000C8717 /* KDDataModel.h */,
+				B1EBB1AF1DBA16BD000C8717 /* KDDataModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -347,10 +359,10 @@
 		B1EBB0BA1DB4B8FD000C8717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1EBB18B1DB9C57E000C8717 /* XMGInputView.h */,
-				B1EBB18C1DB9C57E000C8717 /* XMGInputView.m */,
-				B1EBB18D1DB9C57E000C8717 /* XMGInputView.xib */,
+				B1EBB1A51DBA11F4000C8717 /* XMGInputView.h */,
+				B1EBB1A61DBA11F4000C8717 /* XMGInputView.m */,
 				B1EBB11F1DB5C15C000C8717 /* CustomCardView.h */,
+				B1EBB1A71DBA11F4000C8717 /* XMGInputView.xib */,
 				B1EBB1201DB5C15C000C8717 /* CustomCardView.m */,
 				B1EBB17D1DB8C5B9000C8717 /* KDScrollViews.h */,
 				B1EBB17E1DB8C5B9000C8717 /* KDScrollViews.m */,
@@ -527,6 +539,17 @@
 			path = Controllers/Sousou;
 			sourceTree = "<group>";
 		};
+		B1EBB1AA1DBA1593000C8717 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBB1B11DBDAFF3000C8717 /* HttpTool.h */,
+				B1EBB1B21DBDAFF3000C8717 /* HttpTool.m */,
+				B1EBB1AB1DBA15A0000C8717 /* KDDataTool.h */,
+				B1EBB1AC1DBA15A0000C8717 /* KDDataTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -594,7 +617,7 @@
 				B1EBB1671DB8A489000C8717 /* KDLogViewController.storyboard in Resources */,
 				B176F5971DB4B769008D91F2 /* Assets.xcassets in Resources */,
 				B1EBB1691DB8A489000C8717 /* KDRegisterViewController.storyboard in Resources */,
-				B1EBB18F1DB9C57E000C8717 /* XMGInputView.xib in Resources */,
+				B1EBB1A91DBA11F4000C8717 /* XMGInputView.xib in Resources */,
 				B1EBB1841DB9BE0C000C8717 /* KDMessageCell.xib in Resources */,
 				B1EBB16C1DB8A489000C8717 /* KDMessageViewController.storyboard in Resources */,
 				B1EBB1721DB8A489000C8717 /* KDSettingViewController.storyboard in Resources */,
@@ -664,25 +687,28 @@
 				B1EBB17F1DB8C5B9000C8717 /* KDScrollViews.m in Sources */,
 				B1EBB1211DB5C15C000C8717 /* CustomCardView.m in Sources */,
 				B1EBB19B1DB9C5B9000C8717 /* XMGMoreInputKeyboardView.m in Sources */,
+				B1EBB1B01DBA16BD000C8717 /* KDDataModel.m in Sources */,
 				B1EBB18A1DB9C54A000C8717 /* XMGChatController.m in Sources */,
 				B1EBB13D1DB72BA0000C8717 /* UIImage+KDimage.m in Sources */,
 				B1EBB1951DB9C59F000C8717 /* XMGChatFrame.m in Sources */,
 				B1EBB0CB1DB4D2B4000C8717 /* KDGuillotineMenu.m in Sources */,
 				B1EBB1661DB8A489000C8717 /* KDLogViewController.m in Sources */,
 				B1EBB1981DB9C5AF000C8717 /* XMGChatCell.m in Sources */,
-				B1EBB18E1DB9C57E000C8717 /* XMGInputView.m in Sources */,
 				B1EBB1731DB8A489000C8717 /* KDSouSouViewController.m in Sources */,
 				B1EBB11D1DB5C0E9000C8717 /* CCDraggableCardView.m in Sources */,
 				B1EBB16B1DB8A489000C8717 /* KDMessageViewController.m in Sources */,
+				B1EBB1AD1DBA15A0000C8717 /* KDDataTool.m in Sources */,
 				B1EBB1771DB8A560000C8717 /* KDPhoto.m in Sources */,
 				B1EBB17A1DB8B3DB000C8717 /* KDInfoViewController.m in Sources */,
 				B1EBB11E1DB5C0E9000C8717 /* CCDraggableContainer.m in Sources */,
+				B1EBB1B31DBDAFF3000C8717 /* HttpTool.m in Sources */,
 				B1EBB1681DB8A489000C8717 /* KDRegisterViewController.m in Sources */,
 				B1EBB16D1DB8A489000C8717 /* KDProfileViewController.m in Sources */,
 				B1EBB16A1DB8A489000C8717 /* KDMainViewController.m in Sources */,
 				B1EBB1871DB9C121000C8717 /* KDMessageModel.m in Sources */,
 				B1EBB1921DB9C591000C8717 /* XMGChat.m in Sources */,
 				B1EBB1A41DB9C60F000C8717 /* UIImage+YFResizing.m in Sources */,
+				B1EBB1A81DBA11F4000C8717 /* XMGInputView.m in Sources */,
 				B1EBB19E1DB9C601000C8717 /* XMGLongPressBtn.m in Sources */,
 				B1EBB0BB1DB4B8FD000C8717 /* AppDelegate.m in Sources */,
 				B1EBB1A31DB9C60F000C8717 /* NSString+YFTimestamp.m in Sources */,

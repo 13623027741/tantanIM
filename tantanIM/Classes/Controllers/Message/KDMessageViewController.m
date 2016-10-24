@@ -23,23 +23,46 @@ UIAlertViewDelegate
 >
 
 @property(nonatomic,strong)UITableView* tableView;
-/**
- *  会话
- */
-@property(nonatomic,strong)NSMutableArray* sessions;
 
 @property(nonatomic,strong)NSString* aUsername;
 
 @property(nonatomic,strong)NSString* aMessage;
 /**
+ *  其他用户与当前用户会话
+ */
+@property(nonatomic,strong)NSMutableArray* sessions;
+/**
  *  接收到消息的conversationId ,用来监听是否有新消息到达
  */
 @property(nonatomic,strong)NSMutableSet* conversationIds;
+/**
+ *  当前用户与其他用户的会话
+ */
+@property(nonatomic,strong)NSMutableArray* userSesstions;
 
 @end
 
 static NSString* cellID = @"messageCell";
 @implementation KDMessageViewController
+
+-(NSMutableArray *)userSesstions{
+    if (!_userSesstions) {
+        NSMutableArray* arr = [NSMutableArray arrayWithArray:[[EMClient sharedClient].chatManager getAllConversations]];
+        NSMutableArray* temp = [NSMutableArray array];
+        
+        for (EMConversation* conversation in arr) {
+            if ([conversation.conversationId isEqualToString:[EMClient sharedClient].currentUsername]) {
+                [temp addObject:conversation];
+            }else{
+                EMTextMessageBody* body = (EMTextMessageBody*)conversation.latestMessage.body;
+                NSLog(@"--body--[%@]--",body.text);
+            }
+        }
+        _userSesstions = [NSMutableArray arrayWithArray:temp];
+        
+    }
+    return _userSesstions;
+}
 
 -(NSMutableSet *)conversationIds{
     if (!_conversationIds) {
@@ -50,7 +73,19 @@ static NSString* cellID = @"messageCell";
 
 -(NSMutableArray *)sessions{
     if (!_sessions) {
-        _sessions = [NSMutableArray arrayWithArray:[[EMClient sharedClient].chatManager getAllConversations]];
+        
+        NSMutableArray* arr = [NSMutableArray arrayWithArray:[[EMClient sharedClient].chatManager getAllConversations]];
+        NSMutableArray* temp = [NSMutableArray array];
+        
+        for (EMConversation* conversation in arr) {
+            if (![conversation.conversationId isEqualToString:[EMClient sharedClient].currentUsername]) {
+                [temp addObject:conversation];
+            }else{
+                EMTextMessageBody* body = (EMTextMessageBody*)conversation.latestMessage.body;
+                NSLog(@"--body--[%@]--",body.text);
+            }
+        }
+        _sessions = [NSMutableArray arrayWithArray:temp];
         
     }
     return _sessions;
@@ -86,7 +121,6 @@ static NSString* cellID = @"messageCell";
     self.aUsername = @"";
     self.aMessage = @"";
     
-    
 }
 
 -(void)viewDidLayoutSubviews{
@@ -121,6 +155,9 @@ static NSString* cellID = @"messageCell";
     EMMessage* message = conversation.latestMessage;
     EMMessageBody* body = message.body;
     
+    
+//    NSLog(@"---messageId[%@]--conversationId[%@]----from[%@]-to[%@]---",message.messageId,message.conversationId,message.from,message.to);
+    
     cell.message.textColor = [UIColor colorWithRed:202.0/255 green:202.0/255 blue:202.0/255 alpha:1];
     cell.title.textColor = [UIColor blackColor];
     
@@ -134,23 +171,59 @@ static NSString* cellID = @"messageCell";
         }
     }
     
-    if (body.type == EMMessageBodyTypeText) {
-        EMTextMessageBody* textBody = (EMTextMessageBody*)message.body;
-        cell.message.text = textBody.text;
-        
-    }else if (body.type == EMMessageBodyTypeImage){
-        cell.message.text = @"图片";
-    }else if (body.type == EMMessageBodyTypeVideo){
-        cell.message.text = @"影片";
-    }else if (body.type == EMMessageBodyTypeLocation){
-        cell.message.text = @"位置";
-    }else if (body.type == EMMessageBodyTypeVoice){
-        cell.message.text = @"语音";
-    }else if(body.type == EMMessageBodyTypeFile){
-        cell.message.text = @"文件";
+    NSInteger LongTime = (NSInteger)message.localTime;
+    
+    NSLog(@"--客户端的时间--%ld--",LongTime);
+    
+    cell.time.text = [self getTime:LongTime];
+    
+    for (EMConversation* conversation in self.userSesstions) {
+        if ([conversation.latestMessage.to isEqualToString:message.from]) {
+            EMMessage* mgs = conversation.latestMessage;
+            
+            if (message.timestamp > mgs.timestamp) {
+                
+                
+                if (body.type == EMMessageBodyTypeText) {
+                    EMTextMessageBody* textBody = (EMTextMessageBody*)message.body;
+                    cell.message.text = textBody.text;
+                    
+                }else if (body.type == EMMessageBodyTypeImage){
+                    cell.message.text = @"图片";
+                }else if (body.type == EMMessageBodyTypeVideo){
+                    cell.message.text = @"影片";
+                }else if (body.type == EMMessageBodyTypeLocation){
+                    cell.message.text = @"位置";
+                }else if (body.type == EMMessageBodyTypeVoice){
+                    cell.message.text = @"语音";
+                }else if(body.type == EMMessageBodyTypeFile){
+                    cell.message.text = @"文件";
+                }
+                
+            }else if(message.timestamp < mgs.timestamp){
+                
+                
+                if (body.type == EMMessageBodyTypeText) {
+                    EMTextMessageBody* textBody = (EMTextMessageBody*)mgs.body;
+                    cell.message.text = textBody.text;
+                    
+                }else if (body.type == EMMessageBodyTypeImage){
+                    cell.message.text = @"图片";
+                }else if (body.type == EMMessageBodyTypeVideo){
+                    cell.message.text = @"影片";
+                }else if (body.type == EMMessageBodyTypeLocation){
+                    cell.message.text = @"位置";
+                }else if (body.type == EMMessageBodyTypeVoice){
+                    cell.message.text = @"语音";
+                }else if(body.type == EMMessageBodyTypeFile){
+                    cell.message.text = @"文件";
+                }
+                
+            }
+        }
     }
     
-    cell.time.text = [self getTime:message.localTime];
+    
     
     return cell;
 }
@@ -160,6 +233,7 @@ static NSString* cellID = @"messageCell";
     
     EMConversation* conversation = self.sessions[indexPath.row];
     XMGChatController* chatVC = [XMGChatController xmg_chatVcWithChatter:conversation.conversationId chatType:EMConversationTypeChat];
+    chatVC.conversation = conversation;
     
     EMError* err;
     [conversation markAllMessagesAsRead:&err];
@@ -231,7 +305,12 @@ static NSString* cellID = @"messageCell";
         EMTextMessageBody* body = (EMTextMessageBody*)message.body;
         NSLog(@"--消息[%@]---id[%@]--",body.text,message.conversationId);
         
+        
         [self.conversationIds addObject:message.conversationId];
+        
+//        if(![[EMClient sharedClient].currentUsername isEqualToString:message.conversationId]){
+//            
+//        }
     }
     
     [self.tableView reloadData];
@@ -262,19 +341,15 @@ static NSString* cellID = @"messageCell";
 
 -(NSString*)getTime:(NSInteger)timeval{
     
-    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+    NSLog(@"---timeval--[%ld]---",timeval);
     
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:timeval];
+
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy.MM.dd";
     
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
     
-    [formatter setDateFormat:@"yyyy.MM.dd"];
-    
-    
-    NSDate*confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeval];
-    
-    return [formatter stringFromDate:confromTimesp];
-    
+    return [formatter stringFromDate:date];
 }
 
 @end
